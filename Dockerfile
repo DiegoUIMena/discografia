@@ -1,8 +1,8 @@
 # STAGE 1
-FROM gradle:jsk21 as builder
+FROM gradle:jdk21 as builder
 WORKDIR /app
 COPY ./build.gradle .
-COPY ./setting.gradle .
+COPY ./settings.gradle .
 COPY src ./src
 RUN gradle build --no-daemon
 
